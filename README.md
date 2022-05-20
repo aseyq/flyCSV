@@ -46,13 +46,13 @@ df %>%
   someotherfunction(...)
 ```  
 
-### Write the file in the working directory
+### Write the file with a specific name in a directory
 ```
 df %>%
   somefunction(...) %>%
   flyCSV("my_file.csv")
 ```
-### Change the program to open
+### Change the software to open the file
 ```
 df %>%
   somefunction(...) %>%
