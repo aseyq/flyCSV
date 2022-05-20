@@ -43,7 +43,7 @@ df %>%
 ```{r}
 df %>%
   somefunction(...) %>%
-  flyCSV() %>%
+  flyCSV() %>% # My csv will show the changes up to this point!
   someotherfunction(...)
 ```  
 
