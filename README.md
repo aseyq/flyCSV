@@ -32,14 +32,14 @@ library(flycsv)
 flyCSV(df)
 ```
 
-### Use within a pipe
+### You can use it at the end of a pipe
 ```{r}
 df %>%
   somefunction(...) %>%
   flyCSV()
 ```  
   
-### Use between pipes
+### as well as between pipes
 ```{r}
 df %>%
   somefunction(...) %>%
@@ -48,11 +48,13 @@ df %>%
 ```  
 
 ### Write the file with a specific name in a directory
+In this case it won't be deleted automatically.
 ```
 df %>%
   somefunction(...) %>%
   flyCSV("my_file.csv")
 ```
+
 ### Change the software to open the file
 ```
 df %>%
