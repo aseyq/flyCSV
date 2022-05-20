@@ -21,6 +21,11 @@ install.packages("devtools")
 
 
 ## Usage
+Load the library
+```{r}
+library(flycsv)
+```
+
 ### Basic Usage
 ```{r}
 flyCSV(df)
