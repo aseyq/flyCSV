@@ -4,6 +4,21 @@
 
 This library helps you view your CSV files on the fly. The functionality is similar to the `View()` function however it uses 
 system's default file viewer for CSVs. And unlike `View()` it returns the same object so it can be used in between pipe chains.
+## Installation
+The package is in a very early stage. For that reason it is not on CRAN (yet, hopefully).
+
+You can install it by:
+
+```
+devtools::install_github("aseyq/flyCSV")
+```
+
+If you don't have the package devtools, you can install it with:
+
+```
+install.packages("devtools")
+```
+
 
 ## Usage
 ### Basic Usage
