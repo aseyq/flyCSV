@@ -2,7 +2,7 @@
 % Please edit documentation in R/flyCSV.R
 \name{flyCSV}
 \alias{flyCSV}
-\title{Load a Matrix}
+\title{Open your data as CSV}
 \usage{
 flyCSV(df, filename = NA, browser = getOption("browser"), row.names = FALSE)
 }
