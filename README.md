@@ -1,4 +1,4 @@
-# flyCSV: Check your data frames as CSV on the fly!  (R Package)
+# flyCSV: Check your data frame as CSV on the fly!  (R Package)
 **Warning: This is a very preliminary version. Might contain bugs and stuff**
 
 
