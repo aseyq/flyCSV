@@ -1,0 +1,13 @@
+Package: flyCSV
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person("Ali Seyhun", "Saral", , "saral@posteo.net", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-5523-5355"))
+Description: This package provides a function `flyCSV` which allows users to 
+    save their data as a temporary CSV file and open them externally on the fly.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.0
