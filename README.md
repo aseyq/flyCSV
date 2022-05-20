@@ -1,9 +1,14 @@
 # flyCSV: Check your data frame as CSV on the fly!  (R Package)
-**Warning: This is a very preliminary version. Might contain bugs and stuff**
+**Warning: This is a very preliminary version. Might contain bugs and stuff*
 
 
 This library helps you view your CSV files on the fly. The functionality is similar to the `View()` function however it uses 
 system's default file viewer for CSVs. And unlike `View()` it returns the same object so it can be used in between pipe chains.
+
+
+![example](https://raw.githubusercontent.com/aseyq/flyCSV/main/excluded/images/example.gif)
+
+
 ## Installation
 The package is in a very early stage. For that reason it is not on CRAN (yet, hopefully).
 
