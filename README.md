@@ -55,6 +55,15 @@ df %>%
   flyCSV("my_file.csv")
 ```
 
+### It supports calling multiple times, so it is useful to compare the data
+```{r}
+df %>%
+  do_something() %>%
+  flyCSV("before.csv")  %>% 
+  do_something_else() %>%    
+  flyCSV("after.csv")
+```
+
 ### Change the software to open the file
 ```
 df %>%
