@@ -55,6 +55,7 @@ df %>%
   someotherfunction(...)
 ```  
 
+
 ### you can save your data while using `flyCSV`
 ```{r}
 new_df <- df %>%
@@ -87,6 +88,7 @@ df %>%
   somefunction(...) %>%
   flyCSV("my_file.csv", browser="C:\Program Files\LibreOffice\program\soffice.exe")
 ```
+
 ### Tip: You can create an alias for flyCSV to speed up when you are investigating your data
 ```{r}
 fc <- flyCSV
@@ -96,4 +98,6 @@ df %>%
   fc() 
 ```
 
+### For example
+![example](https://raw.githubusercontent.com/aseyq/flyCSV/main/excluded/images/twodf.png)
 
