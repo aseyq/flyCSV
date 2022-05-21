@@ -92,9 +92,8 @@ df %>%
 fc <- flyCSV
 
 df %>%
-  fc() %>% 
-  filter()
-  fc()
+  do_something() %>%
+  fc() 
 ```
 
 
