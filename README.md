@@ -33,11 +33,19 @@ flyCSV(df)
 ```
 
 ### You can use it at the end of a pipe
+#### `magrittr` pipes
 ```{r}
 df %>%
   somefunction(...) %>%
   flyCSV()
 ```  
+  
+#### Base R pipes (from R 4.1 on)
+```{r}
+df |>
+  somefunction(...) |>
+  flyCSV()
+```
   
 ### as well as between pipes
 ```{r}
@@ -46,6 +54,15 @@ df %>%
   flyCSV() %>% # My csv will show the changes up to this point!
   someotherfunction(...)
 ```  
+
+### you can save your data while using `flyCSV`
+```{r}
+new_df <- df %>%
+  somefunction(...) %>%
+  flyCSV() 
+```  
+
+
 
 ### Write the file with a specific name in a directory
 In this case it won't be deleted automatically.
@@ -70,3 +87,14 @@ df %>%
   somefunction(...) %>%
   flyCSV("my_file.csv", browser="C:\Program Files\LibreOffice\program\soffice.exe")
 ```
+### Tip: You can create an alias for flyCSV to speed up when you are investigating your data
+```{r}
+fc <- flyCSV
+
+df %>%
+  fc() %>% 
+  filter()
+  fc()
+```
+
+
