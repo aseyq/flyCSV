@@ -1,8 +1,7 @@
 # flyCSV: Check your data frame as CSV on the fly!  (R Package)
 **Warning: This is a very preliminary version. Might contain bugs and stuff**
 
-This library helps you view your data frames CSV files on the fly. It basically a wrapper that saves the database temporarily and opens it with the default program to open CSV files. he functionality is similar to the built-in `View()` function, however, unlike `View()` it returns the same object so it can be used in between pipe chains. Also it doesn't rely on RStudio.
-
+This library (well, more a function) helps you view your data frames CSV files on the fly. It basically a wrapper that saves the database temporarily, and then opens it with the default program. The functionality is similar to the built-in `View()` function, however, unlike `View()` it returns the same object, so it can be used in between pipe chains. Also it doesn't rely on RStudio.
 
 ![example](https://raw.githubusercontent.com/aseyq/flyCSV/main/excluded/images/example.gif)
 
@@ -14,7 +13,7 @@ You can install it by:
 devtools::install_github("aseyq/flyCSV")
 ```
 
-If you don't have the `devtools` package, you can install it with:
+Devtools package is necessary if you want to install an R package directly from github. You probably already have it but if you don't, you can install it with:
 
 ```
 install.packages("devtools")
@@ -89,7 +88,8 @@ df %>%
   flyCSV("my_file.csv", browser="C:\Program Files\LibreOffice\program\soffice.exe")
 ```
 
-### Tip: You can create an alias for flyCSV to speed up when you are investigating your data
+### Tip: Using an alias
+You can create an alias for flyCSV to speed your writing up when you are investigating your data. 
 ```{r}
 fc <- flyCSV
 
