@@ -20,8 +20,8 @@ flyCSV <- function(df, filename=NA, browser=getOption("browser"), row.names=FALS
         filename <- tempfile(pattern = "file", tmpdir = tempdir(), fileext = ".csv")
     }
     
-    write.csv(df, filename, row.names=row.names, fileEncoding=encoding)
-    browseURL(filename, browser=browser)    
+    utils::write.csv(df, filename, row.names=row.names, fileEncoding=encoding)
+    utils::browseURL(filename, browser=browser)    
     invisible(df)
 }
 
