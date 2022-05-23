@@ -4,7 +4,13 @@
 \alias{flyCSV}
 \title{Open your data as CSV}
 \usage{
-flyCSV(df, filename = NA, browser = getOption("browser"), row.names = FALSE)
+flyCSV(
+  df,
+  filename = NA,
+  browser = getOption("browser"),
+  row.names = FALSE,
+  encoding = ""
+)
 }
 \arguments{
 \item{df}{Object do be written. Usually data frame}
@@ -13,6 +19,8 @@ flyCSV(df, filename = NA, browser = getOption("browser"), row.names = FALSE)
 be created}
 
 \item{browser}{a non-empty character string giving the name of the program}
+
+\item{encoding}{File encoding}
 
 \item{rownames}{creates a row name column at the beginnig. Usually rows are named as the line number
 to be used as the HTML browser.}
