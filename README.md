@@ -109,7 +109,7 @@ and comment easily the function before. For insance:
 iris  %>% 
   filter(Species == "virginica")  %>% 
   # flyCSV() %>%     
-  flyDN() # does nothing
+  flyDN() 
 ```
 
 - As well as this one:
@@ -117,7 +117,7 @@ iris  %>%
 iris  %>% 
   filter(Species == "virginica")  %>% 
   flyCSV()  %>% 
-  flyDN() # does nothing
+  flyDN() 
 ```
 
 
