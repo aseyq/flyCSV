@@ -12,45 +12,45 @@ This library (well, more a function) helps you view your data frames CSV files o
 ## Installation
 You can install it by:
 
-```
+```r
 devtools::install_github("aseyq/flyCSV")
 ```
 
 Devtools package is necessary if you want to install an R package directly from github. You probably already have it but if you don't, you can install it with:
 
-```
+```r
 install.packages("devtools")
 ```
 
 
 ## Usage
 Load the library
-```{r}
+```r
 library(flycsv)
 ```
 
 ### Basic Usage
-```{r}
+```r
 flyCSV(df)
 ```
 
 ### You can use it at the end of a pipe
 #### `magrittr` pipes
-```{r}
+```r
 df %>%
   somefunction(...) %>%
   flyCSV()
 ```  
   
 #### Base R pipes (from R 4.1 on)
-```{r}
+```r
 df |>
   somefunction(...) |>
   flyCSV()
 ```
   
 ### as well as between pipes
-```{r}
+```r
 df %>%
   somefunction(...) %>%
   flyCSV() %>% # My csv will show the changes up to this point!
@@ -59,7 +59,7 @@ df %>%
 
 
 ### you can save your data while using `flyCSV`
-```{r}
+```r
 new_df <- df %>%
   somefunction(...) %>%
   flyCSV() 
@@ -69,14 +69,14 @@ new_df <- df %>%
 
 ### Write the file with a specific name in a directory
 In this case it won't be deleted automatically.
-```
+```r
 df %>%
   somefunction(...) %>%
   flyCSV("my_file.csv")
 ```
 
 ### It supports calling multiple times, so it is useful to compare the data
-```{r}
+```r
 df %>%
   do_something() %>%
   flyCSV("before.csv")  %>% 
@@ -85,7 +85,7 @@ df %>%
 ```
 
 ### Change the software to open the file
-```
+```r
 df %>%
   somefunction(...) %>%
   flyCSV("my_file.csv", browser="C:\Program Files\LibreOffice\program\soffice.exe")
@@ -97,7 +97,7 @@ comment the pipe at the end of the chain, since the previous pipe will not have 
 input, you will get an error, or your R will wait for an input. For instance:
 
 - This will not work unless you remove the pipe in the previous line:
-```{r}
+```r
 iris  %>% 
   filter(Species == "virginica")  %>% 
   # flyCSV()        
@@ -108,7 +108,7 @@ returns the same dataframe. Therefore you can put `flyDN()` at the end of your p
 and comment easily the function before. For insance:
 
 - This will work:
-```{r}
+```r
 iris  %>% 
   filter(Species == "virginica")  %>% 
   # flyCSV() %>%     
@@ -116,7 +116,7 @@ iris  %>%
 ```
 
 - As well as this one:
-```{r}
+```r
 iris  %>% 
   filter(Species == "virginica")  %>% 
   flyCSV()  %>% 
@@ -126,7 +126,7 @@ iris  %>%
 
 ### Tip: Using an alias
 You can create an alias for flyCSV to speed your writing up when you are investigating your data. 
-```{r}
+```r
 fc <- flyCSV
 
 df %>%
