@@ -87,6 +87,39 @@ df %>%
   somefunction(...) %>%
   flyCSV("my_file.csv", browser="C:\Program Files\LibreOffice\program\soffice.exe")
 ```
+### Tip: Using `flyDN` (stands for Do Nothing) to quick comment-outs and ins
+Let's say that you are working on a long pipe and time to time you want to investigate your 
+data at the end of a pipe by commenting out and in `flyCSV` function. With pipes, if you
+comment the pipe at the end of the chain, since the previous pipe will not have function to
+input, you will get an error, or your R will wait for an input. For instance:
+
+- This will not work unless you remove the pipe in the previous line:
+```{r}
+iris  %>% 
+  filter(Species == "virginica")  %>% 
+  # flyCSV()        
+```
+
+To facilitate commenting ins and outs, flyCSV comes with a function `flyDN` which does nothing but 
+returns the same dataframe. Therefore you can put `flyDN()` at the end of your pipes to uncomment 
+and comment easily the function before. For insance:
+
+- This will work:
+```{r}
+iris  %>% 
+  filter(Species == "virginica")  %>% 
+  # flyCSV() %>%     
+  flyDN()
+```
+
+- As well as this one:
+```{r}
+iris  %>% 
+  filter(Species == "virginica")  %>% 
+  flyCSV()  %>% 
+  flyDN()
+```
+
 
 ### Tip: Using an alias
 You can create an alias for flyCSV to speed your writing up when you are investigating your data. 
