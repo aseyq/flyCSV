@@ -13,17 +13,17 @@ flyCSV(
 )
 }
 \arguments{
-\item{df}{Object do be written. Usually data frame}
+\item{df}{Object do be written. Usually data frame.}
 
-\item{filename}{a filename to save the CSV. If not provided, a temporary file will
-be created}
+\item{filename}{a file name/path to save the CSV to. If provided, the file
+will not be deleted afterwards.}
 
-\item{browser}{a non-empty character string giving the name of the program}
-
-\item{encoding}{File encoding}
-
-\item{rownames}{creates a row name column at the beginnig. Usually rows are named as the line number
+\item{browser}{a non-empty character string giving the name of the program
 to be used as the HTML browser.}
+
+\item{row.names}{Whether to include row names on the first column. TRUE or FALS.}
+
+\item{encoding}{File encoding. Passes to write.csv}
 }
 \value{
 df Returns the original object

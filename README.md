@@ -3,7 +3,7 @@
 
 This library (well, more a function) helps you view your data frames CSV files on the fly. It is basically a wrapper that saves the database temporarily, and then opens it with the default program. The functionality is similar to the built-in `View()` function, however, unlike `View()` it returns the same object, so it can be used in between pipe chains. Also it doesn't rely on RStudio.
 
-![example](https://raw.githubusercontent.com/aseyq/flyCSV/main/excluded/images/example.gif)
+![example](https://raw.githubusercontent.com/aseyq/flyCSV/main/inst/images/example.gif)
 
 
 ## Installation
@@ -132,7 +132,7 @@ df %>%
 ```
 
 ### For example
-![example](https://raw.githubusercontent.com/aseyq/flyCSV/main/excluded/images/twodf.png)
+![example](https://raw.githubusercontent.com/aseyq/flyCSV/main/inst/images/twodf.png)
 
 ### Tip: Using a lightweight CSV editor
 Since it takes some time to open heavier software like Microsoft Office or OpenOffice, I find it useful to open csv files with a lightweight CSV editor. In Linux, I use [Gnumeric](http://www.gnumeric.org/). Although I'vey never used them, [TableTool](https://github.com/jakob/TableTool) in MacOS, and [CSV Quick Viewer](https://sourceforge.net/projects/csvquickviewer/) for Windows can be useful alternatives.
