@@ -18,7 +18,15 @@ flyCSV(
 \item{filename}{a file name/path to save the CSV to. If provided, the file
 will not be deleted afterwards.}
 
+<<<<<<< HEAD
 \item{browser}{a non-empty character string giving the name of the program
+=======
+\item{browser}{a non-empty character string giving the name of the program}
+
+\item{encoding}{File encoding}
+
+\item{rownames}{creates a row name column at the beginnig. Usually rows are named as the line number
+>>>>>>> main
 to be used as the HTML browser.}
 
 \item{row.names}{Whether to include row names on the first column. TRUE or FALS.}
