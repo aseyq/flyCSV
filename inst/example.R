@@ -3,8 +3,9 @@ library("tidyverse")
 
 fc <- flyCSV
 
-iris  %>% 
+saveit<- iris  %>% 
     fc()  %>% 
     filter(Species == "virginica")  %>% 
-    fc()
+    fc()  %>%
+    flyDN()
     

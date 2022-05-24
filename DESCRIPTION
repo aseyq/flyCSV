@@ -1,12 +1,11 @@
 Package: flyCSV
-Title: What the Package Does (One Line, Title Case)
+Title: Opens your data frame as CSV
 Version: 0.0.1.9000
 Authors@R: 
     person("Ali Seyhun", "Saral", , "saral@posteo.net", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5523-5355"))
 Description: This package provides a function `flyCSV` which allows users to 
     save their data as a temporary CSV file and open them externally on the fly.
-<<<<<<< HEAD
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
