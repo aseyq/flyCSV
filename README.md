@@ -145,7 +145,7 @@ Instead of making a software your default viewer, you can specify the program to
 
 
 ## Input types and output structures
-`flyCSV` uses `write.csv` underneath, which is extremely flexible. So,`flyCSV()` can take different types of input. Below is a demonstration of how the CSV file structure would like for different formats.
+`flyCSV` uses `write.csv` underneath, which is extremely flexible. So,`flyCSV()` can take different types of input. Here is a demonstration of how the CSV file structure would look like for different formats.
 
 ### Input is a `vector`
 ```r
