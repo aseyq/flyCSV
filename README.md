@@ -1,5 +1,5 @@
 # flyCSV: Check your data frame as CSV on the fly!  (R Package)
-**Warning: This is a very preliminary version. Might contain bugs and stuff**
+**Warning: This is a very preliminary version.**
 
 ![logo](https://raw.githubusercontent.com/aseyq/flyCSV/main/inst/images/logo.png)
 
