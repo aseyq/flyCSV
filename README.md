@@ -90,6 +90,7 @@ df %>%
   somefunction(...) %>%
   flyCSV("my_file.csv", browser="C:\Program Files\LibreOffice\program\soffice.exe")
 ```
+
 ### Tip: Using `flyDN` (stands for Do Nothing) to quick comment-outs and ins
 Let's say that you are working on a long pipe and time to time you want to investigate your 
 data at the end of a pipe by commenting out and in `flyCSV` function. With pipes, if you
@@ -141,3 +142,63 @@ df %>%
 Since it takes some time to open heavier software like Microsoft Office or OpenOffice, I find it useful to open csv files with a lightweight CSV editor. In Linux, I use [Gnumeric](http://www.gnumeric.org/). Although I've never used them, [TableTool](https://github.com/jakob/TableTool) for MacOS, and [CSV Quick Viewer](https://sourceforge.net/projects/csvquickviewer/) for Windows can be useful alternatives.
 
 Instead of making a software your default viewer, you can specify the program to open the file with `browser` parameter. (See above)
+
+
+## Input types and output structures
+`flyCSV` uses `write.csv` underneath, which is extremely flexible. For that reason `flyCSV()` can take different types of input. Below is a demonstration of how the CSV file structure would like for different formats.
+
+### Input is a `vector`
+```r
+my_vector <- c(1,2,3,4)
+flyCSV(my_vector)
+```
+
+| x |
+| - |
+| 1 |
+| 2 |
+| 3 |
+| 4 |
+
+### Input is a `data.frame` (or `tibble`, or `data.table`)
+```r
+my_df <- data.frame(a=c(1,2,3,4), b=c(4,3,2,1))
+flyCSV(my_df)
+```
+
+| a | b |
+| - | - |
+| 1 | 4 |
+| 2 | 3 |
+| 3 | 2 |
+| 4 | 1 |
+
+### Input is a `matrix`
+```r
+my_matrix <- matrix(c(1,2,3,4,5,6), nrow=2)
+flyCSV(my_matrix)
+```
+
+| V1 | V2 | V3 |
+| -- | -- | -- |
+| 1  | 3  | 5  |
+| 2  | 4  | 6  |
+
+
+### Input is a list of `data.frame`s (or `tibble`s, or `data.table`s)
+```r
+df1 <- data.frame(a=c(1,2,3,4), b=c(4,3,2,1))
+df2 <- data.frame(a=c(1,3,2,4), b=c(4,2,1,3))
+
+my_list_of_dfs <- list(df1=df1, df2=df2)
+
+flyCSV(my_list_of_dfs)
+```
+
+
+| df1.a | df1.b | df2.a | df2.b |
+| ----- | ----- | ----- | ----- |
+| 1     | 4     | 1     | 4     |
+| 2     | 3     | 3     | 2     |
+| 3     | 2     | 2     | 1     |
+| 4     | 1     | 4     | 3     |
