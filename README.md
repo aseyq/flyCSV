@@ -138,11 +138,6 @@ df %>%
 ### For example
 ![example](https://raw.githubusercontent.com/aseyq/flyCSV/main/inst/images/twodf.png)
 
-### Tip: Using a lightweight CSV editor
-Since it takes some time to open heavier software like Microsoft Office or OpenOffice, I find it useful to open csv files with a lightweight CSV editor. In Linux, I use [Gnumeric](http://www.gnumeric.org/). Although I've never used them, [TableTool](https://github.com/jakob/TableTool) for MacOS, and [CSV Quick Viewer](https://sourceforge.net/projects/csvquickviewer/) for Windows can be useful alternatives.
-
-Instead of making a software your default viewer, you can specify the program to open the file with `browser` parameter. (See above)
-
 
 ## Input types and output structures
 `flyCSV` uses `write.csv` underneath, which is extremely flexible. So,`flyCSV()` can take different types of input. Here is a demonstration of how the CSV file structure would look like for different formats.
