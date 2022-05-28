@@ -75,7 +75,7 @@ df %>%
   flyCSV("my_file.csv")
 ```
 
-### It supports calling multiple times, so it is useful to compare the data
+### It supports calling multiple times, so it can be useful to compare the data
 ```r
 df %>%
   do_something() %>%
