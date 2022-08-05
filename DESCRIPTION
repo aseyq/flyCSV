@@ -1,6 +1,6 @@
 Package: flyCSV
 Title: Opens your data frame as CSV
-Version: 0.0.1.9000
+Version: 0.0.2
 Authors@R: 
     person("Ali Seyhun", "Saral", , "saral@posteo.net", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5523-5355"))
