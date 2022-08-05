@@ -14,13 +14,13 @@
 #' @param row.names Whether to include row names on the first column. TRUE or FALS.
 #' @return df Returns the original object
 #' @export
-flyCSV <- function(df, filename=NA, browser=getOption("browser"), row.names=FALSE, encoding = "") {
+flyCSV <- function(df, filename=NA, browser=getOption("browser"), row.names=FALSE, encoding = "", col.names=TRUE) {
     
     if (is.na(filename)) {
         filename <- tempfile(pattern = "file", tmpdir = tempdir(), fileext = ".csv")
     }
     
-    utils::write.csv(df, filename, row.names=row.names, fileEncoding=encoding)
+    utils::write.csv(df, filename, row.names=row.names, fileEncoding=encoding, col.names=col.names)
     utils::browseURL(filename, browser=browser)    
     invisible(df)
 }
